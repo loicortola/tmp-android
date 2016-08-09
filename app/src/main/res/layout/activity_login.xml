@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/grey"
-    tools:context="resourcepool.io.handson_android_app.LoginActivity">
+    tools:context=".ui.activity.LoginActivity">
 
     <TextView
         android:id="@+id/header"

@@ -10,4 +10,10 @@
     <string name="reset">Reset</string>
     <string name="login_success">Login success!</string>
     <string name="login_failure">Login failure!</string>
+    <string name="welcome_user">Welcome %1$s ! What\'s up?</string>
+    <string name="author_mock">John Doe</string>
+    <string name="message_mock">Hello world.</string>
+    <string name="write_message">Write message</string>
+    <string name="message_sent_success">Message sent successfully</string>
+    <string name="message_sent_failure">Message failed to send</string>
 </resources>

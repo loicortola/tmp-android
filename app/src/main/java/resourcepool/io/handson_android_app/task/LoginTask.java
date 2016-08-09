@@ -1,7 +1,11 @@
-package resourcepool.io.handson_android_app;
+package resourcepool.io.handson_android_app.task;
 
 import android.os.AsyncTask;
 import android.util.Log;
+
+import resourcepool.io.handson_android_app.service.ChatRestApi;
+import resourcepool.io.handson_android_app.service.impl.ChatRestApiImpl;
+import resourcepool.io.handson_android_app.model.User;
 
 /**
  * Created by loicortola on 08/08/2016.
@@ -18,7 +22,7 @@ public class LoginTask extends AsyncTask<Void, Void, Boolean> {
 
     public interface LoginListener {
         void onLoginAttempt();
-        void onLoginResult(boolean success);
+        void onLoginResult(boolean success, User user);
 
     }
 
@@ -45,7 +49,7 @@ public class LoginTask extends AsyncTask<Void, Void, Boolean> {
     protected void onPostExecute(Boolean result) {
         Log.w(TAG, "Result was: " + result);
         if (mListener != null) {
-            mListener.onLoginResult(result);
+            mListener.onLoginResult(result, new User(login, password));
         }
     }
 }
